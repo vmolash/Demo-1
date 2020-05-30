@@ -1,0 +1,77 @@
+/*! Nav Bar*/
+div.navBar .logo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: auto;
+    padding: 1rem;
+    & span {
+        font-family: $font-headings;
+        color: #000;
+        text-transform: capitalize;
+        margin-left: 1.5rem;
+    }
+}
+div.navBar {
+    background-color: $body-background;;
+    input[type=checkbox] {
+        position: absolute;
+        display: none;
+        &:checked ~ nav {
+            height: auto;
+            overflow: hidden;
+        }
+    }
+    label {
+        display: block;
+        background: url(../images/hamburger-menu.png)no-repeat right center;
+        text-indent: -999em;
+        height: 56px;
+        cursor: pointer;
+        @include browsers; // include mixin browsers
+        user-select: none;
+        position: relative;
+        top: 2px;
+        right: 8px;
+        @include break(500px) { display: none; }
+    }
+    
+    nav {
+        height: 0;
+        overflow: hidden;
+        @include break(500px) {
+            height: 100%;
+            overflow: visible;
+        }
+        ul{
+            margin: 0 1.5rem;
+            @include break(0, 499px) { .logo { display: none; } }
+            li {
+                display: flex;
+                border-radius: 5px;
+                @include linx($nav-color, $nav-hover, $nav-hover);
+                &:hover {
+                    &:first-of-type { background-color: transparent; }
+                }
+                a { 
+                    font-weight: 400;
+                    display: block;
+                    padding: 12px 10px;
+                    text-transform: uppercase;
+                }
+            } 
+            @include break(500px) {
+                display: flex;
+                justify-content: center;
+                li:first-of-type { margin-right: auto; }
+                li {
+                    a {
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+} 
