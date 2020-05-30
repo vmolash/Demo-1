@@ -48,8 +48,7 @@ div.navBar {
             background-color: inherit;
         }
         ul{
-            margin: 0 5.5rem;
-            @include break(500px) { margin: 0 1.5rem;}
+            margin: 0 1.5rem;
             @include break(0, 499px) { .logo { display: none; } }
             li {
                 display: flex;
