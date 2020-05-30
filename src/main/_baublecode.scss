@@ -6,6 +6,12 @@ html {
     max-width: 960px;
     margin: 0 auto;
 }
+.nav li:last-of-type {
+    display: none;
+    @include break(550px) {
+        display: inherit;
+    }
+}
 .products {
     display: grid;
     @include break(800px) {

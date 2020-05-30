@@ -28,6 +28,16 @@ html {
   margin: 0 auto;
 }
 
+.nav li:last-of-type {
+  display: none;
+}
+
+@media (min-width: 550px) {
+  .nav li:last-of-type {
+    display: inherit;
+  }
+}
+
 .products {
   display: grid;
   grid-gap: 3rem 4rem;
