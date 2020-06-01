@@ -81,17 +81,29 @@ html {
 }
 
 .products article div h2 {
+  font-size: 1.7rem;
   color: #e1e1e1;
-  font-size: 3.4rem;
   letter-spacing: 1.6px;
   font-weight: 400;
 }
 
+@media (min-width: 485px) {
+  .products article div h2 {
+    font-size: 3.4rem;
+  }
+}
+
 .products article div h3 {
+  font-size: 1.6rem;
   font-family: ‘Allura’, cursive;
-  font-size: 2.1rem;
   margin-left: 7rem;
   margin-bottom: 2rem;
+}
+
+@media (min-width: 485px) {
+  .products article div h3 {
+    font-size: 2.1rem;
+  }
 }
 
 .products article:nth-of-type(n+3) div {
@@ -105,8 +117,13 @@ html {
 .product-items {
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: repeat(2, 1fr);
   margin: 0 5rem 3rem;
+}
+
+@media (min-width: 400px) {
+  .product-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 570px) {
@@ -194,7 +211,6 @@ html {
 }
 
 .footer .logo {
-  width: 80px;
   align-self: center;
 }
 
@@ -600,13 +616,7 @@ div.navBar nav {
 }
 
 div.navBar nav ul {
-  margin: 0 5.5rem;
-}
-
-@media (min-width: 500px) {
-  div.navBar nav ul {
-    margin: 0 1.5rem;
-  }
+  margin: 0 1.5rem;
 }
 
 @media (min-width: 0) and (max-width: 499px) {
@@ -752,8 +762,17 @@ div.navBar nav ul li a {
   border-radius: 20px;
   border: none;
   box-shadow: 2px 4px 6px #eac1b5;
-  padding: .9rem 1.4rem;
+  font-size: 1rem;
+  padding: .3rem 1.2rem;
+  margin-top: .75rem;
   cursor: pointer;
+}
+
+@media (min-width: 450px) {
+  .btn {
+    font-size: 1.4rem;
+    padding: .9rem 1.4rem;
+  }
 }
 
 .btn:hover {
