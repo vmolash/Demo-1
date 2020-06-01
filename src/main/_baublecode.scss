@@ -45,16 +45,22 @@ html {
         justify-content: space-around;
         align-items: flex-start;
         h2 {
+            font-size: 1.7rem;
             color: #e1e1e1;
-            font-size: 3.4rem;
             letter-spacing: 1.6px;
             font-weight: 400;
+            @include break(485px) {
+                font-size: 3.4rem;
+            }
         }
         h3 {
+            font-size: 1.6rem;
             font-family: $font-headings;
-            font-size: 2.1rem;
             margin-left: 7rem;
             margin-bottom: 2rem;
+            @include break(485px) {
+                font-size: 2.1rem;
+            }
         }
     }
     &:nth-of-type(n+3) div {
@@ -67,8 +73,10 @@ html {
 .product-items {
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: repeat(2,1fr);
     margin: 0 5rem 3rem;
+    @include break(400px) {
+        grid-template-columns: repeat(2,1fr);
+    }
     @include break(570px) {
         grid-template-columns: repeat(3,1fr);
     }
@@ -128,20 +136,19 @@ html {
     }
     @include break(550px){
         background: url(../images/bg_02.jpg) no-repeat center center;
-    background-size: cover;
-    height: 250px;
-    display: grid;
-    grid-gap: 1.5rem;
-    justify-items: center;
-    grid-template-columns: 1.5fr repeat(3, 1fr) 1.5fr;
-    };
+        background-size: cover;
+        height: 250px;
+        display: grid;
+        grid-gap: 1.5rem;
+        justify-items: center;
+        grid-template-columns: 1.5fr repeat(3, 1fr) 1.5fr;
+        };
     article:first-of-type {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
     .logo {
-        width: 80px;
         align-self: center;
     }
 }
