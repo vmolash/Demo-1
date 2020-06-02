@@ -14,11 +14,8 @@ html {
     }
 }
 .products {
-    display: grid;
-    @include break(800px) {
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(2,1fr);
-    }
+    @include break(0, 799px) { grid-template-columns: 1fr; }
+    @include break(800px) {  grid-template-columns: repeat(2,1fr); }
     grid-gap: 3rem 4rem;
     margin: 4rem 5rem;;
 }
@@ -71,18 +68,8 @@ html {
     }
 }
 .product-items {
-    display: grid;
     grid-gap: 2rem;
     margin: 0 5rem 3rem;
-    @include break(400px) {
-        grid-template-columns: repeat(2,1fr);
-    }
-    @include break(570px) {
-        grid-template-columns: repeat(3,1fr);
-    }
-    @include break(750px) {
-        grid-template-columns: repeat(4,1fr);
-    }
     .btn {
         font-size: 1rem;
         padding: .3rem 1.2rem;
